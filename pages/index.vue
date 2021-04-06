@@ -1,4 +1,10 @@
 <template>
+<section class="index">
+  <card
+  v-for="i in 5"
+  :key="i"
+  />
+  
   <div class="container">
     <div>
       <Logo />
@@ -25,10 +31,16 @@
       </div>
     </div>
   </div>
+</section>
 </template>
 
 <script>
-export default {}
+import Card from '~/components/card.vue'
+export default {
+  components: {
+    Card
+  }
+}
 </script>
 
 <style>
